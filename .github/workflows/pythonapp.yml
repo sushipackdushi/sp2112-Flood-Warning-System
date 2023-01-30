@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 matplotlib pytest requests
+          pip install flake8 matplotlib pytest requests haversine
 
       - name: Lint with flake8 (non-blocking)
         run: flake8 --exit-zero --statistics *.py
@@ -36,3 +36,9 @@ jobs:
         run: |
           python Task2A.py
           python Task2D.py
+
+      - name: Run Deliverable 3 code
+        run: |
+          python Task1B.py
+          python Task1C.py
+          python Task1D.py
