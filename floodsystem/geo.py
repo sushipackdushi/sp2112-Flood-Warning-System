@@ -39,7 +39,6 @@ def stations_within_radius(stations, centre, r):
     return final_list
 
 
-
 # function for task 1D part 1
 def rivers_with_station(stations):
     """ Write description of function here"""
