@@ -10,7 +10,9 @@ from haversine import haversine #Unit
 
 # Function for Task 1B
 def stations_by_distance(stations, p):
-    """ ENTER SOMETHING HERE  """
+    """ Returns a sorted list of (station, distance) tuples, where distance (float) is the distance of the station
+    (MonitoringStation) from the coordinate p  """
+
     station_distance = []
 
     for station in stations:
@@ -22,8 +24,25 @@ def stations_by_distance(stations, p):
     return x
 
 
+# Function for Task 1C
+def stations_within_radius(stations, centre, r):
+    """ Returns a list of all stations (type MonitoringStation) within radius r of a geographic coordinate x"""
+    final_list = []
+
+    for station in stations:
+        distance = haversine(station.coord, centre)
+        if distance < r:
+            final_list.append(station.name)
+
+    final_list = sorted(final_list)
+
+    return final_list
+
+
+
 # function for task 1D part 1
 def rivers_with_station(stations):
+    """ Write description of function here"""
 
     list_of_rivers = []
 
@@ -36,6 +55,7 @@ def rivers_with_station(stations):
 
 # function for task 1D part 2
 def stations_by_river(stations):
+    """ Write description here"""
 
     dict_stations_by_river = {}
 
