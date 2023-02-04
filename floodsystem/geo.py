@@ -84,9 +84,11 @@ def rivers_by_station_number(stations, N):
 
     final_tuple = reversed_tuple[:N]
 
+    while final_tuple[N-1][1] == reversed_tuple[N][1]:
+        final_tuple = reversed_tuple[:N+1]
+        N = N + 1
+
     return final_tuple
-
-
     #dictionary created (river: station 1, station 2 ......)
     #change station names --> numbers (use for loop to iterate through then set station names into len(station names)
     #convert dict into list of tuples
@@ -95,21 +97,3 @@ def rivers_by_station_number(stations, N):
     #Nth entry; if there are more rivers with the same number of stations as the N th entry, include these rivers in the list
     #1 check for the number of station
     #2 if final_tuple[] = reverse
-
-
-
-
-
-
-
-    #station_number = []
-
-    #for station in stations:
-     #   river = station.river
-      #  name = station.name
-       # station_number.append(name)
-        #number = len(station_number)
-        #tuple_river_by_station_number = (river, number)
-        #list_river_by_station_number.append(tuple_river_by_station_number)
-
-    #return list_river_by_station_number
