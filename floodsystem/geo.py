@@ -1,5 +1,5 @@
 # Copyright (C) 2018 Garth N. Wells
-#
+
 # SPDX-License-Identifier: MIT
 """This module contains a collection of functions related to
 geographical data."""
@@ -68,3 +68,48 @@ def stations_by_river(stations):
             dict_stations_by_river[river] = [station]
 
     return dict_stations_by_river
+
+
+# function for task 1E
+def rivers_by_station_number(stations, N):
+    rivers_and_their_stations = stations_by_river(stations)
+    for river in rivers_and_their_stations:
+        rivers_and_their_stations[river] = len(rivers_and_their_stations[river])
+
+    tuple_river_and_their_station = tuple(rivers_and_their_stations.items())
+
+    sorted_tuples = sorted(tuple_river_and_their_station, key=lambda x: x[1])
+
+    reversed_tuple = sorted_tuples[::-1]
+
+    final_tuple = reversed_tuple[:N]
+
+    return final_tuple
+
+
+    #dictionary created (river: station 1, station 2 ......)
+    #change station names --> numbers (use for loop to iterate through then set station names into len(station names)
+    #convert dict into list of tuples
+
+
+    #Nth entry; if there are more rivers with the same number of stations as the N th entry, include these rivers in the list
+    #1 check for the number of station
+    #2 if final_tuple[] = reverse
+
+
+
+
+
+
+
+    #station_number = []
+
+    #for station in stations:
+     #   river = station.river
+      #  name = station.name
+       # station_number.append(name)
+        #number = len(station_number)
+        #tuple_river_by_station_number = (river, number)
+        #list_river_by_station_number.append(tuple_river_by_station_number)
+
+    #return list_river_by_station_number
