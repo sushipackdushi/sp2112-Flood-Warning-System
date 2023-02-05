@@ -1,13 +1,14 @@
 from floodsystem.geo import rivers_with_station
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import stations_by_river
+stations = build_station_list()
+rivers = rivers_with_station(stations)
 
 
 def run():
-    stations = build_station_list()
-    rivers = rivers_with_station(stations)
     x = sorted(rivers)
-    print("Number of rivers with at least one monitoring station:", len(rivers))
+    y = len(rivers)
+    print("Number of rivers with at least one monitoring station:", y)
     print("First 10 river:", x[:10])
     print()
 

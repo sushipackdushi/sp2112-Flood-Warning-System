@@ -89,11 +89,6 @@ def rivers_by_station_number(stations, N):
         N = N + 1
 
     return final_tuple
-    #dictionary created (river: station 1, station 2 ......)
-    #change station names --> numbers (use for loop to iterate through then set station names into len(station names)
-    #convert dict into list of tuples
 
+#test so that river_by_station_number prints smth a list of tuples that >= n
 
-    #Nth entry; if there are more rivers with the same number of stations as the N th entry, include these rivers in the list
-    #1 check for the number of station
-    #2 if final_tuple[] = reverse
