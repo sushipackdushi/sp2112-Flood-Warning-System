@@ -90,5 +90,4 @@ def rivers_by_station_number(stations, N):
 
     return final_tuple
 
-#test so that river_by_station_number prints smth a list of tuples that >= n
 

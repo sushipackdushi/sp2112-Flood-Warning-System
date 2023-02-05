@@ -32,8 +32,8 @@ def test_if_list_is_alphabetical(list):
     for i in range(len(list)-1):
         if list[i] > list[i+1]:
             return False, "list is not alphabetical"
-        else:
-            return True, "list is alphabetical"
+
+    return True, "list is alphabetical"
 
 
 station_river = stations_by_river(stations)
@@ -42,7 +42,6 @@ river_aire_station_names = station_names_from_stations(river_aire)
 non_alphabetical_list = ["apple", "cow", "boy"]
 print(river_aire_station_names)
 print(test_if_list_is_alphabetical(river_aire_station_names))
-print()
 print(non_alphabetical_list)
 print(test_if_list_is_alphabetical(non_alphabetical_list))
 
