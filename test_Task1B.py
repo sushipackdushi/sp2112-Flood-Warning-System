@@ -17,5 +17,5 @@ def test_stations_by_distance():
 
     x = geo.stations_by_distance(test_stations, (52.2053, 0.1218))
 
-    assert x == [('station1', 157.2495984740402), ('station2', 314.47523947196964), ('station3', 417.65293997288967)]
+    assert x == [('station1', 157.2495984740402), ('station2', 314.47523947196964), ('station3', 471.65293997288967)]
 
