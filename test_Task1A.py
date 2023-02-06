@@ -1,6 +1,6 @@
 from haversine import haversine
 from floodsystem.utils import sorted_by_key  #noqa
-from stationdata import build_station_list
+from floodsystem.stationdata import build_station_list
 
 
 def test_stations_by_distance():
