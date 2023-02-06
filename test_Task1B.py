@@ -6,7 +6,7 @@ from floodsystem import geo
 # Test if stations can be sorted by distance
 
 
-def test_stations_by_distance(stations, p):
+def test_stations_by_distance():
     # Create some stations
 
     station1 = MonitoringStation("s_id1", "m_id1", "stn1", (1, 1), (0, 1), "river1", "town1")
