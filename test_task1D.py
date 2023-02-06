@@ -8,14 +8,16 @@ rivers = rivers_with_station(stations)
 print()
 print("Test for number of rivers")
 
+
 def test_for_no_of_rivers():
-    x = sorted(rivers)
-    y = len(rivers)
+    y = len(sorted(rivers))
     if type(y) == int:
         return print("1) No errors for number of stations")
+    assert type(y) == int
 
 
 test_for_no_of_rivers()
+
 
 def station_names_from_stations(stations):
     station_names = []
@@ -23,6 +25,7 @@ def station_names_from_stations(stations):
         name = station.name
         station_names.append(name)
     return sorted(station_names)
+
 
 print()
 print("2) Test if list is alphabetical")
@@ -34,6 +37,7 @@ def test_if_list_is_alphabetical(list):
             return False, "list is not alphabetical"
 
     return True, "list is alphabetical"
+    assert list[i] > list[i+1]
 
 
 station_river = stations_by_river(stations)
@@ -44,4 +48,3 @@ print(river_aire_station_names)
 print(test_if_list_is_alphabetical(river_aire_station_names))
 print(non_alphabetical_list)
 print(test_if_list_is_alphabetical(non_alphabetical_list))
-
