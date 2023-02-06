@@ -1,5 +1,5 @@
 from haversine import haversine
-from .utils import sorted_by_key  #noqa
+from floodsystem.utils import sorted_by_key  #noqa
 
 
 def test_stations_by_distance(stations, p):
