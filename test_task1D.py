@@ -37,9 +37,9 @@ def test_if_list_is_alphabetical():
     river_aire_station_names = station_names_from_stations(river_aire)
     for i in range(len(river_aire_station_names)-1):
         if river_aire_station_names[i] > river_aire_station_names[i+1]:
-            return False, print("1)list is not alphabetical")
+            return False, print("1) list is not alphabetical")
 
-    return True, print("1)list is alphabetical")
+    return True, print("1) list is alphabetical")
     assert river_aire_station_names[i] > river_aire_station_names[i+1]
 
 
