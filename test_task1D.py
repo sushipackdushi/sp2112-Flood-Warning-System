@@ -28,23 +28,37 @@ def station_names_from_stations(stations):
 
 
 print()
-print("2) Test if list is alphabetical")
+print("Test if list is alphabetical")
 
 
-def test_if_list_is_alphabetical(list):
-    for i in range(len(list)-1):
-        if list[i] > list[i+1]:
-            return False, "list is not alphabetical"
+def test_if_list_is_alphabetical():
+    station_river = stations_by_river(stations)
+    river_aire = station_river["River Aire"]
+    river_aire_station_names = station_names_from_stations(river_aire)
+    for i in range(len(river_aire_station_names)-1):
+        if river_aire_station_names[i] > river_aire_station_names[i+1]:
+            return False, print("1)list is not alphabetical")
 
-    return True, "list is alphabetical"
-    assert list[i] > list[i+1]
+    return True, print("1)list is alphabetical")
+    assert river_aire_station_names[i] > river_aire_station_names[i+1]
 
 
-station_river = stations_by_river(stations)
-river_aire = station_river["River Aire"]
-river_aire_station_names = station_names_from_stations(river_aire)
-non_alphabetical_list = ["apple", "cow", "boy"]
-print(river_aire_station_names)
-print(test_if_list_is_alphabetical(river_aire_station_names))
-print(non_alphabetical_list)
-print(test_if_list_is_alphabetical(non_alphabetical_list))
+test_if_list_is_alphabetical()
+
+
+def test_if_list_is_alphabetical2():
+    non_alphabetical_list = ["apple", "cow", "boy"]
+    for i in range(len(non_alphabetical_list)-1):
+        if non_alphabetical_list[i] > non_alphabetical_list[i+1]:
+            return False, print("2)list is not alphabetical")
+
+    return True, print("2)list is alphabetical")
+    assert non_alphabetical_list[i] > non_alphabetical_list[i+1]
+
+
+test_if_list_is_alphabetical2()
+
+#print(river_aire_station_names)
+#print(test_if_list_is_alphabetical(river_aire_station_names))
+#print(non_alphabetical_list)
+#print(test_if_list_is_alphabetical(non_alphabetical_list))
