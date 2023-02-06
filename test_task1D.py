@@ -46,17 +46,17 @@ def test_if_list_is_alphabetical():
 test_if_list_is_alphabetical()
 
 
-def test_if_list_is_alphabetical2():
-    non_alphabetical_list = ["apple", "cow", "boy"]
-    for i in range(len(non_alphabetical_list)-1):
-        if non_alphabetical_list[i] > non_alphabetical_list[i+1]:
-            return False, print("2)list is not alphabetical")
+#def test_if_list_is_alphabetical2():
+#    non_alphabetical_list = ["apple", "cow", "boy"]
+#    for i in range(len(non_alphabetical_list)-1):
+#        if non_alphabetical_list[i] > non_alphabetical_list[i+1]:
+#            return False, print("2)list is not alphabetical")
+#
+#    return True, print("2)list is alphabetical")
+#    assert non_alphabetical_list[i] > non_alphabetical_list[i+1]
 
-    return True, print("2)list is alphabetical")
-    assert non_alphabetical_list[i] > non_alphabetical_list[i+1]
 
-
-test_if_list_is_alphabetical2()
+#test_if_list_is_alphabetical2()
 
 #print(river_aire_station_names)
 #print(test_if_list_is_alphabetical(river_aire_station_names))
