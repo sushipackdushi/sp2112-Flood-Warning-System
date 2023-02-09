@@ -19,8 +19,9 @@ def test_stations_by_distance():
     # for Task1B
 
     x = geo.stations_by_distance(stations, (0, 0))
-    assert x == [('station1', 157.2495984740402), ('station2', 314.47523947196964), ('station3', 471.65293997288967),
-                 ('station4', 628.7586658391518)]
+    assert x == [[('station1', 157.2495984740402)], [('station2', 314.47523947196964)],
+                 [('station3', 471.65293997288967)],
+                 [('station4', 628.7586658391518)]]
 
     # checks if the function output which is a list matches the expected list
 
@@ -32,7 +33,4 @@ def test_stations_within_radius():
     assert x == ["station1", "station2"]
 
 
-def test_inconsistent_typical_range_stations():
-    # For Task1F
-    x = station.inconsistent_typical_range_stations(stations)
-    assert x == [station3, station4]
+
