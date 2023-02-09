@@ -19,9 +19,9 @@ def test_stations_by_distance():
     # for Task1B
 
     x = geo.stations_by_distance(stations, (0, 0))
-    assert x == [[('river1', 'town1', 157.2495984740402)], [('river2', 'town2', 314.47523947196964)],
-                 [('river3', 'town3', 471.65293997288967)],
-                 [('river4', 'town4', 628.7586658391518)]]
+    assert x == [('station1', 157.2495984740402), ('station2', 314.47523947196964),
+                 ('station3', 471.65293997288967),
+                 ('station4', 628.7586658391518)]
 
     # checks if the function output which is a list matches the expected list
 
