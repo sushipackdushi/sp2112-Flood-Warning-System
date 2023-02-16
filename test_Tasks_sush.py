@@ -33,7 +33,7 @@ def test_stations_within_radius():
     assert x == ["station1", "station2"]
 
 
-def test_plot_water_levels(station, dates, levels):
+def test_plot_water_levels():
     """Test for Task 2E"""
 
     t = [datetime(2016, 12, 30), datetime(2016, 12, 31), datetime(2017, 1, 1),
