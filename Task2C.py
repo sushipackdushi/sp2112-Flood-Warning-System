@@ -5,9 +5,14 @@ stations = build_station_list()
 update_water_levels(stations)
 
 list = []
-for station in stations_highest_rel_level(stations, N):
+for station in stations_highest_rel_level(stations, 10):
     name = station[0].name
     relative_water_level = station[1]
     list.append((name, relative_water_level))
 
-print(stations_highest_rel_level(stations, 9))
+print()
+print("Nth highest relative water levels and their stations: ")
+print("N=10")
+print()
+for i in list:
+    print(i)
