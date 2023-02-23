@@ -12,6 +12,7 @@ for station in stations_level_over_threshold(stations, 0.8):
     list.append((name, relative_water_level))
 
 print()
-print(list[:10])
+for i in list[:10]:
+    print(i)
 
 
