@@ -2,6 +2,9 @@ from floodsystem import geo, plot
 from floodsystem import station
 from floodsystem.station import MonitoringStation
 from datetime import datetime, timedelta
+import matplotlib.pyplot as plt
+import matplotlib.pyplot
+import matplotlib.dates
 
 
 # Builds a list of made up stations for testing

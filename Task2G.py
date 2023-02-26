@@ -26,7 +26,7 @@ def run():
 
     print(f"Warning: The data for the following stations is currently available:"
           f" {empty_data_stations} ")
-
+    print("Monitor these stations manually")
 
     list = []
 
@@ -36,10 +36,30 @@ def run():
         list.append((town, relative_water_level))
 
     print()
-    print("Nth highest relative water levels and their towns: ")
+    print(f"{n}th highest relative water levels and their towns: ")
     print()
+
+    severe_list = []
+    high_list = []
+    moderate_list = []
+    low_list = []
+
     for i in list:
-        print(i)
+        if i[1] > 1.5:
+            severe_list.append(i[0])
+        elif i[1] > 1.2:
+            high_list.append(i[0])
+        elif i[1] > 1:
+            moderate_list.append(i[0])
+        elif i[1] < 1:
+            low_list.append(i[0])
+
+    print(f"Severe risk of flooding in these towns: {severe_list}")
+    print(f"High risk of flooding in these towns: {high_list}")
+    print(f"Moderate risk of flooding in these towns: {moderate_list}")
+    print(f"Low risk of flooding in these towns: {low_list}")
+
+
 
 
 if __name__ == "__main__":
