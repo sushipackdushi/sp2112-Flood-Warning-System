@@ -27,12 +27,22 @@ def run():
     print(f"Warning: The data for the following stations is currently available:"
           f" {empty_data_stations} ")
 
-    # Retrieve most at-risk stations
-    at_risk_stations = stations_highest_rel_level(stations, n)
 
-    
+    list = []
+
+    for station in stations_highest_rel_level(stations, n):
+        town = station[0].town
+        relative_water_level = station[1]
+        list.append((town, relative_water_level))
+
+    print()
+    print("Nth highest relative water levels and their towns: ")
+    print()
+    for i in list:
+        print(i)
 
 
 if __name__ == "__main__":
     print("*** Task 2G: CUED Part IA Flood Warning System ***")
     run()
+
